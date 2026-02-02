@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-slate-50;
+  }
+}
+
+/* Custom Gradients if needed, though Tailwind utilities are preferred */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F36F21] to-[#662D91];
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    animation: gradient 3s ease infinite;
+    background-size: 200% auto;
+}
